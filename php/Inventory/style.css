@@ -1,0 +1,41 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    margin-top: 10%;
+    text-align: center;
+    width: 100%;
+    font-weight: 100;
+    font-family: 'Karla';
+    display: block;
+}
+
+.log {
+    line-height: 50px;
+    font-size: 8pt;
+    font-family: tahoma;
+    margin-right: 20px;
+    position:absolute;
+    font-size: 20px;
+    color: yellow;
+    top:0;
+    right:0;
+}
+input[type="text"] {
+    margin-top: 30px;
+    font-size: 25px;
+    border-style: outset;
+    border-color: aquamarine;
+    table-layout: fixed;
+}
+
+button[type = "submit"] {
+    background-color: wheat;
+    border-color:black;
+    text-align: center;
+    height: 30px;
+    width: 150px;
+    margin-top: 50px;
+    
+    
+}
