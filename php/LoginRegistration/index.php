@@ -1,5 +1,9 @@
 <?php
     require_once '../database/config.php';
+    session_start();
+    if (isset($_SESSION['id'])) {
+        header("Location: /php/Inventory/inventory");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,17 +16,44 @@
 </head>
     <div class = "h1" > <h1>Login page  </h1> <div>
 <body>
-    <form action="login.php" method = "POST">
-    <input type = "text" name = "email" placeholder = "email" > 
-    <input type = "password" name = "password" placeholder = "password">
+
+    <form action="login" method = "POST">
+
+    <input type = "text" name = "email" placeholder = "email" value = <?php
+    if (isset($_GET['error'])) {
+        echo $_SESSION['mail'];
+    } elseif (isset($_GET['errorpassword'])) {
+        echo $_SESSION['mail'];
+    } elseif (isset($_GET['erroremail'])) {
+        echo $_SESSION['mail'];
+    }
+    ?> > 
+    <input type = "password" name = "password" placeholder = "password" value = <?php
+    if (isset($_GET['error'])) {
+        echo $_SESSION['pass'];
+    } elseif (isset($_GET['errorpassword'])) {
+        echo $_SESSION['pass'];
+    } elseif (isset($_GET['erroremail'])) {
+        echo $_SESSION['pass'];
+    }
+    ?> >
     <?php 
+    function function_alert($message){
+        echo "<script>alert('$message')</script>";
+    }
+    if (isset($_GET['emptyfields']) == true) {
+        function_alert('You have entered empty fields!');
+    }
     if (isset($_GET['error']) == true) {
+        sleep(1);
         echo '<font color = "#FF0000"><p align = "top">Invalid credentials</p></font>';
     }
     if (isset($_GET['erroremail']) == true) {
+        sleep(1);
         echo '<font color = "#FF0000"><p align = "top">Invalid Email</p></font>';
     }
     if (isset($_GET['errorpassword']) == true) {
+        sleep(1);
         echo '<font color = "#FF0000"><p align = "top">Invalid Password</p></font>';
     }
     ?>
@@ -31,11 +62,7 @@
 
     <div class = "reg">
         
-    <a href = "Register.php"><font color = "#e08282"><font size = 4">No account? Register here now!</font></font></a>
-    
+    <a href = "Register"><font color = "#e08282"><font size = 4">No account? Register here now!</font></font></a>
     </div>
-
-
-    
 </body>
 </html>
