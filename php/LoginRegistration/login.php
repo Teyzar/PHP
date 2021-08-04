@@ -14,14 +14,14 @@
         $wrongEmail = mysqli_query($conn, "SELECT user_email, user_password FROM accounts WHERE user_email != '".$email."' AND  user_password = '".$hashpass."'");
         $wrongPass = mysqli_query($conn, "SELECT user_email, user_password FROM accounts WHERE user_email = '".$email."' AND  user_password != '".$hashpass."'");
 
-        $empty = empty($email) || empty($password);
+        $empty = empty($email) && empty($password);
 
         $hash = md5($email);
        
         if (mysqli_num_rows($true)) {
             sleep(1);
             $_SESSION['id'] = true;
-            header("Location: /php/Inventory/inventory");
+            header("Location: /php/Inventory/homepage.php");
             
         } elseif (!mysqli_num_rows($true)) {    
             header("Location: index?error");
@@ -29,10 +29,8 @@
         } 
         if ($empty) {
             header("Location: index?emptyfields=1");
-            
-
         }
-        if (mysqli_num_rows($wrongPass)) {
+        elseif (mysqli_num_rows($wrongPass)) {
             header("Location: index?errorpassword");
             
         } elseif (mysqli_num_rows($wrongEmail)) {

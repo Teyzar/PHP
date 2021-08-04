@@ -9,6 +9,9 @@ body {
     font-family: 'Karla';
     display: block;
 }
+.h2 {
+    margin-top: 100px;
+}
 
 .log {
     line-height: 50px;
@@ -36,6 +39,7 @@ button[type = "submit"] {
     height: 30px;
     width: 150px;
     margin-top: 50px;
-    
-    
+}
+.add {
+    margin-top: 20%;
 }
