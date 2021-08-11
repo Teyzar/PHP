@@ -1,0 +1,40 @@
+body {
+    width: 99%;
+    text-align: center;
+    margin-top: 5px;
+    position: absolute;
+}
+.insert {
+    margin-top: 2%;
+    margin-left: 37%;
+    padding: 5px;
+    text-decoration: double;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+}
+.table {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200px;
+    margin-top: 10%;
+    margin-left: 12%;
+    color:darkslategray;
+    position: absolute;
+}
+.homes {
+    border-style: ridge;
+    border-color: grey;
+    line-height: 40px;
+    font-size: 15pt;
+    margin-left: 20%;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 70px;
+    position: static;
+}
+.Clear {
+    text-align: center;
+    margin-left: 200%;
+    position: absolute;
+}

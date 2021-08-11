@@ -4,5 +4,4 @@
         header("Location: http://localhost/php/LoginRegistration/index");
         exit;
     }
-
 ?>

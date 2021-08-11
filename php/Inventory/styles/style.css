@@ -3,39 +3,41 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    width: 100%;
+    width: 90%;
     font-weight: 100;
     font-family: 'Karla';
+    position: absolute;
     display: block;
-}
-.h2 {
-    z-index: 10;
-    margin-left:700px;
-    margin-top: 20%;
-    color: darkgoldenrod;
 }
 .h1 {
     text-align: center;
-    margin-top: 15%;
-    margin-left: 50px;
-    
+    margin-top: 10%;
+    margin-left: 200px;
 }
 .log {
     border-style: ridge;
     border-color: grey;
     width: 70px;
     line-height: 40px;
-    margin-top: 10px;
     font-size: 15pt;
     font-family: tahoma;
-    margin-right: 20px;
+    margin-right: 0;
+    top: 0;
+    left: 106%;
     position:absolute;
     font-size: 20px;
-    color: yellow;
-    top:0;
-    right:0;
+    color: rgb(116, 116, 106);
+    margin-top: 10px;
 }
 input[type="text"] {
+    margin-top: 0 ;
+    margin-bottom: 0;
+    font-size: 25px;
+    border-style: outset;
+    border-color: aquamarine;
+    table-layout: fixed;
+}
+input[type="number"] {
     margin-top: 0 ;
     margin-bottom: 0;
     font-size: 25px;
@@ -47,35 +49,33 @@ input[type="text"] {
 button[type = "submit"] {
     background-color: lightgoldenrodyellow;
     border-color: green;
-    margin-left: 50px;
+    margin-left: 200px;
     color: black;
     height: 30px;
     width: 150px;
     margin-top: 50px;
-    
-}
-.button2 {
-    margin-left: 69%;
-    position: absolute;
-    width: 150px;
-    height: 30px;
-}
-.add {
-    margin-top: 0%;
-    position: fixed;
 }
 
+.button2 {
+    width: 0;
+    display: block;
+    position: fixed;
+    top:45%;
+    left: 36%;
+    margin-top: 0px;
+}
 .check {
-    margin: 120px 0 0 170px;
-    padding: 10px;
-    margin-left: 700px;
-    margin-top: 2%;
+    display: block;
+    position: fixed;
+    top: 46%;
+    margin-left: 36%;
+    margin-top: -150px;
 }
 .succesful {
-    margin-left: 875px;
+    margin-left:33%;
     width: 200px;
     color: darkslategray;
-    margin-top: 8%;
+    margin-top: -10%;
     position: absolute;
 }
 .home{

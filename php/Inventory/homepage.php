@@ -1,5 +1,5 @@
-
 <?php
+    session_cache_limiter('private_no_expire');
     require_once 'auth-check.php';
     require_once '../database/config.php';
 ?>
@@ -9,23 +9,22 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "stylesheet" type = "text/css" href = "style.css">
+        <link rel = "stylesheet" type = "text/css" href = "/php/Inventory/styles/style.css">
         <title>Home</title>
     </head>
-    <?php ?>
     <div class = "log"><a href = "logout"><font color = "black">Logout</font></a></div>
+    <div class = "home"><a href = "homepage"><font color = "black">Home</font></a></div>
     <body>
-            <h1> Welcome </h1>
-            <h1> Inventory Management </h1>
+            <h1 class ="h1"> Welcome <br>Inventory Management </h1>
 
             <form action="inventory" method = "POST">
                 <div class = "button"><button type = "submit" name = "addprod"> ADD INVENTORY</button> </div>
             </form>
-            <form action="index" method = "POST">
-                <div class = "button"><button type = "submit" name = "addprod"> VIEW INVENTORY</button> </div>
+            <form action="View" method = "POST">
+                <div class = "button"><button type = "submit" name = "view">VIEW INVENTORY</button> </div>
             </form>
-            <form action="inventory" method = "POST">
-                <div class = "button"><button type = "submit" name = "addprod"> MAKE PURCHASE</button> </div>
+            <form action="/php/Inventory/Purchase/purchase" method = "POST">
+                <div class = "button"><button type = "submit" name = "purchase"> MAKE PURCHASE</button> </div>
             </form>
         
         
