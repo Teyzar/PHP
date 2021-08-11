@@ -4,6 +4,7 @@
     if (isset($_SESSION['id'])) {
         header("Location: /php/Inventory/inventory");
     }
+    sleep(1);
 ?>
 <!DOCTYPE html>
 <html lang="en">

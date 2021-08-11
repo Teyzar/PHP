@@ -1,24 +1,28 @@
 <?php
 
-    header("Content-Type:application/json");
-    include '../config.php';
+    // require_once './database/config.php';
+    // $router = new Router(new Request);
 
-    $sql = "SELECT user_id, user_email, user_password FROM accounts";
+    // $router->get('/get', function () {
+    //     return <<<HTML
+    //     <h1>Hello world</h1>
+    //   HTML;
+    // })
+    // // $ch = curl_init();
+    // // $url = "http://localhost:8000/get";
+    // // curl_setopt($ch, CURLOPT_URL, $url);
+    // // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    // // $resp = curl_exec($ch);
 
-    $result = $conn->query($sql);
-    if ($result) {
-        $i = 0;
-        while($row  = mysqli_fetch_assoc($result)) {
-            $response[$i]['user_id'] = $row['user_id'];
-            $response [$i]['user_email'] = $row['user_email'];
-            $response [$i]['user_password'] = $row['user_password'];
-            $i++;
-        }
-        echo json_encode($response,JSON_PRETTY_PRINT);
-    } else {
-        echo "0 results";
-    }
-    $conn->close();
+    // // if ($e = curl_error($ch)) {
+    // //     echo $e;
+    // // } else {
+    // //     $decode = json_decode($resp);
+    // //     echo "<pre>";
+    // //     print_r($decode);
+    // //     echo "</pre>";
+    // // }
+    // // curl_close($ch);
 
 ?>
 
